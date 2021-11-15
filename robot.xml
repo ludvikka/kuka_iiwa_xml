@@ -72,7 +72,7 @@
                                         <geom pos="0 0 -0.0005" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.4 0.4 0.4 1" mesh="link_7_vis" name="link_7_visual" />
                                         <geom pos="0 0 -0.0005" type="mesh" contype="0" rgba="0.4 0.4 0.4 1" mesh="link_7" name="link_7_collision" />
                                         <body name="b_6" pos="0 0 0.044" quat="0 0 0 1">
-                                          <joint name="joint_6" class="small_joint"/>
+                                          <joint name="joint_8" class="small_joint"/>
                                           <!-- This geom has a tiny mass because MuJoCo doesn't allow massless bodies with
                                                DOFs. Normally the gripper would be attached as a child of this body. -->
                                           <geom name="ring_6" class="small_ring" mass="1e-9"/>
