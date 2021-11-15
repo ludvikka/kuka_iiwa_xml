@@ -28,6 +28,20 @@
         <mesh name="link_6_vis" file="meshes/link_6_vis.stl" />
         <mesh name="link_7_vis" file="meshes/link_7_vis.stl" />
     </asset>
+    <default>
+        <default class="small_joint">
+          <joint armature="2" frictionloss="1"/>
+        </default>
+        <default class="ring">
+          <geom type="cylinder" material="light_gray" mass="0"/>
+          <default class="large_ring">
+            <geom size="0.044 0.011"/>
+          </default>
+          <default class="small_ring">
+            <geom size="0.035 0.009"/>
+          </default>
+        </default>  
+    </default>
     <worldbody>
         <body name="base" pos="0 0 0">
             <!-- robot view -->
