@@ -71,10 +71,12 @@
                                         <joint name="joint_7" pos="0 0 0" axis="0 0 1" limited="true" range="-3.05433 3.05433" damping="0.1" />
                                         <geom pos="0 0 -0.0005" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.4 0.4 0.4 1" mesh="link_7_vis" name="link_7_visual" />
                                         <geom pos="0 0 -0.0005" type="mesh" contype="0" rgba="0.4 0.4 0.4 1" mesh="link_7" name="link_7_collision" />
-                                        <body name="right_hand" pos="0 0 0.044" quat="0 0 0 1">
-                                            <!-- This camera points out from the eef. -->
-                                            <camera mode="fixed" name="eye_in_hand" pos="0.05 0 0" quat="0 0.707108 0.707108 0" fovy="75"/>
-                                            <!-- To add gripper -->
+                                        <body name="b_6" pos="0 0 0.044" quat="0 0 0 1">
+                                          <joint name="joint_6" class="small_joint"/>
+                                          <!-- This geom has a tiny mass because MuJoCo doesn't allow massless bodies with
+                                               DOFs. Normally the gripper would be attached as a child of this body. -->
+                                          <geom name="ring_6" class="small_ring" mass="1e-9"/>
+                                          <site name="wristsite" quat="0. 0.70710678118 0.70710678118 0."/>
                                         </body>
                                     </body>
                                 </body>
